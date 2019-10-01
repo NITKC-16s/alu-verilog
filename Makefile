@@ -1,2 +1,5 @@
-all:
-	iverilog -o nand2.vvp -s TEST_NAND2 library/nand2.v library/not1.v test.v
+LIBRARY := library/nand2.v \
+	library/not1.v
+
+test.vvp: $(LIBRARY) test.v
+	iverilog -o test.vvp -s TEST_NAND2  $^
