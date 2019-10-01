@@ -1,6 +1,6 @@
 /* NAND2 test */
 
-module TEST_NAND;
+module TEST_NAND2;
 
 reg a, b;
 wire out;
@@ -8,8 +8,8 @@ wire out;
 NAND2 bbb (a, b, out);
 
 initial begin
-   $dumpfile("and2test.vcd");
-   $dumpvars(0, TEST_NAND);
+   $dumpfile("nand2.vcd");
+   $dumpvars(0, TEST_NAND2);
    $monitor ("%t: a = %b, b = %b, out = %b", $time, a, b, out);
 
        a = 0; b = 0;
