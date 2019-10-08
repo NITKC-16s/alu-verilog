@@ -1,7 +1,8 @@
+
 module NOT1 (
 	input A,
 	output X );
 
-    assign X = ~A;
+	NAND2 new_nand (A,A, X);
 
 endmodule
