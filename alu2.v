@@ -9,7 +9,7 @@ module ALU (
 
 	wire [7:0] decoder_x;
 
-	DECODER3 opecode_decoder (Mode[0], Mode[1], Mode[2], decoder_x[7:0]);
+	DECODER3 opecode_decoder (Mode[2], Mode[1], Mode[0], decoder_x[7:0]);
 
 	// mode
 	// 0x00 : 000 : plus
