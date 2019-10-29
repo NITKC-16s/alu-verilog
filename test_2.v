@@ -12,7 +12,7 @@ DECODER3 new_decoder (a, b, 1'b0, decoder_out);
 initial begin
    $dumpfile("test.vcd");
    $dumpvars(0, TEST);
-   $monitor ("%t: ha = ( %b , %b ), fa = ( %b , %b ), fai = ( %b , %b ), decoder = %b", $time, ha_s, ha_c, fa_s, fa_c, fai_s, fai_c, decoder_out);
+   $monitor ("%t: a = %b, b = %b, ha = ( %b , %b ), fa = ( %b , %b ), fai = ( %b , %b ), decoder = %b", $time, a, b, ha_s, ha_c, fa_s, fa_c, fai_s, fai_c, decoder_out);
 
         a = 0; b = 0;
    #10  a = 1;
