@@ -1,18 +1,15 @@
 
 module ALU (
-	input wire [2:0] M,
+	input wire [2:0] Mode,
 	input A,
 	input B,
-	input Ci1,
+	input C_in,
 	output X,
-	output Co );
+	output C_out );
 
 	wire [7:0] decoder_x;
-	wire Ci2;
-	wire Ci3;
-	wire Ci4;
 
-	DECODER3 opecode_decoder (M[0], M[1], M[2], decoder_x[7:0]);
+	DECODER3 opecode_decoder (Mode[0], Mode[1], Mode[2], decoder_x[7:0]);
 
 	// opcode
 	// 0x00 : plus
@@ -27,16 +24,13 @@ module ALU (
 
 	FA2 new_fa (A, B, Ci4, So, Cfo);
 
-	wire dsi1;
-	wire dsi2;
-	wire dsi3;
-	OR3 new_or_for_ds_1 (M[0], M[3], M[4], dsi1);
-	OR2 new_or_for_ds_2 (M[1], M[2], dsi2);
+	OR3 new_or_for_ds_1 (Mode[0], Mode[3], Mode[4], dsi1);
 	NOT1 new_not_for_ds (dsi1, dsi2);
-	OR2 new_or_for_ds_3 (dsi1, dsi2, dsi3);
+	OR2 new_or_for_ds_2 (Mode[1], Mode[2], dsi3);
+	OR2 new_or_for_ds_3 (dsi2, dsi3, dsi4);
 
-	DATASELECTOR2 output_ds (dsi3, Cfo, So, Co);
+	DATASELECTOR2 output_ds (dsi4, Cfo, So, Co);
 
-	AND2 check_c (Cfo, M[0], X);
+	AND2 check_c (Cfo, Mode[0], X);
 
 endmodule
