@@ -11,7 +11,7 @@ LIBRARY := library/nand2.v \
 	library/or3.v \
 	alu2.v
 
-all: test/test.vvp test/test2.vvp test/test_ds.vvp test/test_decoder.vvp test/test_3in.vvp
+all: test/test.vvp test/test2.vvp test/test_ds.vvp test/test_decoder.vvp test/test_3in.vvp test/test_alu.vvp
 
 test/test.vvp: $(LIBRARY) test/test.v
 	iverilog -o test/test.vvp -s TEST  $^
@@ -27,3 +27,6 @@ test/test_decoder.vvp: $(LIBRARY) test/test_decoder.v
 
 test/test_3in.vvp: $(LIBRARY) test/test_3in.v
 	iverilog -o test/test_3in.vvp -s TEST  $^
+
+test/test_alu.vvp: $(LIBRARY) test/test_alu.v
+	iverilog -o test/test_alu.vvp -s TEST  $^
