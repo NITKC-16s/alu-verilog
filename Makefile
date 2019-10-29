@@ -10,7 +10,7 @@ LIBRARY := library/nand2.v \
 	library/dataselector2.v \
 	library/or3.v \
 	library/nor3.v \
-	alu2.v
+	alu_1bit.v
 
 all: test/test.vvp test/test2.vvp test/test_ds.vvp test/test_decoder.vvp test/test_3in.vvp test/test_alu.vvp
 
