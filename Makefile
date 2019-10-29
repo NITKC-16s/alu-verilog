@@ -11,9 +11,19 @@ LIBRARY := library/nand2.v \
 	library/or3.v \
 	library/nor3.v \
 	alu_1bit.v \
-	alu_8bit.v
+	alu_8bit.v \
+	alu_16bit.v
 
-all: test/test.vvp test/test2.vvp test/test_ds.vvp test/test_decoder.vvp test/test_3in.vvp test/test_alu.vvp test/test_alu8.vvp
+TEST := test/test.vvp \
+	test/test2.vvp \
+	test/test_ds.vvp \
+	test/test_decoder.vvp \
+	test/test_3in.vvp \
+	test/test_alu.vvp \
+	test/test_alu8.vvp \
+	test/test_alu16.vvp
+
+all: $(TEST)
 
 clean:
 	rm test/*.vvp
@@ -39,3 +49,6 @@ test/test_alu.vvp: $(LIBRARY) test/test_alu.v
 
 test/test_alu8.vvp: $(LIBRARY) test/test_alu8.v
 	iverilog -o test/test_alu8.vvp -s TEST  $^
+
+test/test_alu16.vvp: $(LIBRARY) test/test_alu16.v
+	iverilog -o test/test_alu16.vvp -s TEST  $^
