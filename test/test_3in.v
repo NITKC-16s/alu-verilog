@@ -1,0 +1,23 @@
+module TEST;
+
+reg a, b, c;
+
+OR3 new_or (a, b, c, or_out);
+
+initial begin
+   $dumpfile("test.vcd");
+   $dumpvars(0, TEST);
+   $monitor ("%t: a = %b, b = %b, c = %b, x = %b", $time, a, b, c, or_out);
+
+        c = 0; b = 0; a = 0;
+   #10  c = 1;
+   #10  c = 0; b = 1;
+   #10  c = 1;
+   #10  c = 0; b = 0; a = 1;
+   #10  c = 1;
+   #10  c = 0; b = 1;
+   #10  c = 1;
+   #10  $finish;
+end
+
+endmodule

@@ -7,9 +7,10 @@ LIBRARY := library/nand2.v \
 	library/fa2.v \
 	library/and3.v \
 	library/decoder3.v \
-	library/dataselector2.v
+	library/dataselector2.v \
+	library/or3.v
 
-all: test/test.vvp test/test2.vvp test/test_ds.vvp test/test_decoder.vvp
+all: test/test.vvp test/test2.vvp test/test_ds.vvp test/test_decoder.vvp test/test_3in.vvp
 
 test/test.vvp: $(LIBRARY) test/test.v
 	iverilog -o test/test.vvp -s TEST  $^
@@ -22,3 +23,6 @@ test/test_ds.vvp: $(LIBRARY) test/test_ds.v
 
 test/test_decoder.vvp: $(LIBRARY) test/test_decoder.v
 	iverilog -o test/test_decoder.vvp -s TEST  $^
+
+test/test_3in.vvp: $(LIBRARY) test/test_3in.v
+	iverilog -o test/test_3in.vvp -s TEST  $^
