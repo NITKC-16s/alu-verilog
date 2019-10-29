@@ -8,10 +8,10 @@ LIBRARY := library/nand2.v \
 	library/and3.v \
 	library/decoder3.v
 
-all: test.vvp test2.vvp
+all: test/test.vvp test/test2.vvp
 
-test.vvp: $(LIBRARY) test.v
-	iverilog -o test.vvp -s TEST  $^
+test/test.vvp: $(LIBRARY) test/test.v
+	iverilog -o test/test.vvp -s TEST  $^
 
-test2.vvp: $(LIBRARY) test_2.v
-	iverilog -o test2.vvp -s TEST  $^
+test/test2.vvp: $(LIBRARY) test/test_2.v
+	iverilog -o test/test2.vvp -s TEST  $^
