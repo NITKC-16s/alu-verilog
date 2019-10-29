@@ -16,7 +16,7 @@ LIBRARY := library/nand2.v \
 	alu_32bit.v
 
 TEST := test/test.vvp \
-	test/test2.vvp \
+	test/test_2.vvp \
 	test/test_ds.vvp \
 	test/test_decoder.vvp \
 	test/test_3in.vvp \
@@ -28,32 +28,8 @@ TEST := test/test.vvp \
 all: $(TEST)
 
 clean:
-	rm test/*.vvp
-	rm *.vcd
+	rm -f test/*.vvp
+	rm -f *.vcd
 
-test/test.vvp: $(LIBRARY) test/test.v
-	iverilog -o test/test.vvp -s TEST  $^
-
-test/test2.vvp: $(LIBRARY) test/test_2.v
-	iverilog -o test/test2.vvp -s TEST  $^
-
-test/test_ds.vvp: $(LIBRARY) test/test_ds.v
-	iverilog -o test/test_ds.vvp -s TEST  $^
-
-test/test_decoder.vvp: $(LIBRARY) test/test_decoder.v
-	iverilog -o test/test_decoder.vvp -s TEST  $^
-
-test/test_3in.vvp: $(LIBRARY) test/test_3in.v
-	iverilog -o test/test_3in.vvp -s TEST  $^
-
-test/test_alu.vvp: $(LIBRARY) test/test_alu.v
-	iverilog -o test/test_alu.vvp -s TEST  $^
-
-test/test_alu8.vvp: $(LIBRARY) test/test_alu8.v
-	iverilog -o test/test_alu8.vvp -s TEST  $^
-
-test/test_alu16.vvp: $(LIBRARY) test/test_alu16.v
-	iverilog -o test/test_alu16.vvp -s TEST  $^
-
-test/test_alu32.vvp: $(LIBRARY) test/test_alu32.v
-	iverilog -o test/test_alu32.vvp -s TEST  $^
+%.vvp : $(LIBRARY) %.v
+	iverilog -o $@ -s TEST $^
