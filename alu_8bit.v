@@ -3,7 +3,9 @@ module ALU8 (
 	input wire [2:0] Mode,
 	input [7:0] A,
 	input [7:0] B,
-	output [7:0] X);
+	input C_in,
+	output [7:0] X,
+	output C_out);
 
 	// mode
 	// 0x00 : 000 : plus
