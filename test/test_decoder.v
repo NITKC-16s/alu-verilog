@@ -10,14 +10,14 @@ initial begin
    $dumpvars(0, TEST);
    $monitor ("%t: a = %b, b = %b, c = %b, x = %b ", $time, a, b, c, x);
 
-        a = 0; b = 0; c = 0;
-   #10  a = 1;
-   #10  a = 0; b = 1;
-   #10  a = 1;
-   #10  a = 0; b = 0; c = 1;
-   #10  a = 1;
-   #10  a = 0; b = 1;
-   #10  a = 1;
+        c = 0; b = 0; a = 0;
+   #10  c = 1;
+   #10  c = 0; b = 1;
+   #10  c = 1;
+   #10  c = 0; b = 0; a = 1;
+   #10  c = 1;
+   #10  c = 0; b = 1;
+   #10  c = 1;
    #10  $finish;
 end
 
