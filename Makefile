@@ -12,7 +12,8 @@ LIBRARY := library/nand2.v \
 	library/nor3.v \
 	alu_1bit.v \
 	alu_8bit.v \
-	alu_16bit.v
+	alu_16bit.v \
+	alu_32bit.v
 
 TEST := test/test.vvp \
 	test/test2.vvp \
@@ -21,7 +22,8 @@ TEST := test/test.vvp \
 	test/test_3in.vvp \
 	test/test_alu.vvp \
 	test/test_alu8.vvp \
-	test/test_alu16.vvp
+	test/test_alu16.vvp \
+	test/test_alu32.vvp
 
 all: $(TEST)
 
@@ -52,3 +54,6 @@ test/test_alu8.vvp: $(LIBRARY) test/test_alu8.v
 
 test/test_alu16.vvp: $(LIBRARY) test/test_alu16.v
 	iverilog -o test/test_alu16.vvp -s TEST  $^
+
+test/test_alu32.vvp: $(LIBRARY) test/test_alu32.v
+	iverilog -o test/test_alu32.vvp -s TEST  $^
