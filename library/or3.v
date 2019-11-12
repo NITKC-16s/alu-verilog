@@ -6,7 +6,7 @@ module KATIO_OR3 (
 	output X );
 
 	wire D;
-	OR2 new_or_1 (A, B, D);
-	OR2 new_or_2 (D, C, X);
+	KATIO_OR2 new_or_1 (A, B, D);
+	KATIO_OR2 new_or_2 (D, C, X);
 
 endmodule

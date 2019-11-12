@@ -12,6 +12,6 @@ module FA2 (
 
 	HA2 new_ha_1 (A, B, SS, CC);
 	HA2 new_ha_2 (X, SS, S, CCC);
-	OR2 new_or (CC, CCC, C);
+	KATIO_OR2 new_or (CC, CCC, C);
 
 endmodule

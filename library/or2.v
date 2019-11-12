@@ -1,5 +1,5 @@
 
-module OR2 (
+module KATIO_OR2 (
 	input A,
 	input B,
 	output X );
