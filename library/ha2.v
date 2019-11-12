@@ -6,6 +6,6 @@ module HA2 (
 	output C);
 
 	EXOR2 new_exor (A, B, S);
-	AND2 new_and (A, B, C);
+	KATIO_AND2 new_and (A, B, C);
 
 endmodule

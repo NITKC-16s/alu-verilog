@@ -6,7 +6,7 @@ module AND3 (
 	output X );
 
 	wire D;
-	AND2 new_and_1 (A, B, D);
-	AND2 new_and_2 (C, D, X);
+	KATIO_AND2 new_and_1 (A, B, D);
+	KATIO_AND2 new_and_2 (C, D, X);
 
 endmodule

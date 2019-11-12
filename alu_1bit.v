@@ -18,7 +18,7 @@ module ALU (
 	// 0x03 : 011 : ExOR
 	// 0x04 : 100 : Not ExOR
 
-	AND2 set_1_when_mode000 (C_in, decoder_x[0], C_in2);
+	KATIO_AND2 set_1_when_mode000 (C_in, decoder_x[0], C_in2);
 	KATIO_OR2  set_0_when_mode010 (C_in2, decoder_x[2], C_in3);
 	KATIO_OR2  set_0_when_mode100 (C_in3, decoder_x[4], C_in4);
 
@@ -31,6 +31,6 @@ module ALU (
 
 	DATASELECTOR2 output_ds (Selector, FA_out_s, FA_out_c, X);
 
-	AND2 check_c (FA_out_c, decoder_x[0], C_out);
+	KATIO_AND2 check_c (FA_out_c, decoder_x[0], C_out);
 
 endmodule
