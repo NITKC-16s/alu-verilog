@@ -5,7 +5,7 @@ module AND2 (
 	output X );
 
 	wire C;
-	NAND2 new_nand (A, B, C);
+	KATIO_NAND2 new_nand (A, B, C);
 	NOT1 new_not (C, X);
 
 endmodule

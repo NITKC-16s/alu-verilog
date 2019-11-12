@@ -8,6 +8,6 @@ module KATIO_OR2 (
 	wire D;
 	NOT1 new_not_1 (A, C);
 	NOT1 new_not_2 (B, D);
-	NAND2 new_nand (C, D, X);
+	KATIO_NAND2 new_nand (C, D, X);
 
 endmodule

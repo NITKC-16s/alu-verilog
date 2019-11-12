@@ -1,4 +1,4 @@
-module NAND2 ( 
+module KATIO_NAND2 ( 
 	input A, B,
 	output X );
 
