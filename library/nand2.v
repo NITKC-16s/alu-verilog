@@ -1,4 +1,4 @@
-module KATIO_NKATIO_AND2 ( 
+module KATIO_AND2 ( 
 	input A, B,
 	output X );
 

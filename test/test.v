@@ -4,7 +4,7 @@ reg a, b;
 
 wire [7:0] decoder_out;
 
-KATIO_NKATIO_AND2 new_nand (a, b, nand_out);
+KATIO_AND2 new_nand (a, b, nand_out);
 KATIO_OR2 new_or (a, b, or_out);
 NOT1  new_not  (a, not_out);
 EXOR2  new_exor  (a, b, exor_out);
