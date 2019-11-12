@@ -7,3 +7,4 @@ verilog-alu-qupj.qpf
 verilog-alu-qupj.qsf
 incremental_db
 output_files
+simulation
