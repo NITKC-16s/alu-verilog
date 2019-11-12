@@ -1,2 +1,7 @@
 *.vcd
 *.vvp
+db
+serv_req_info.txt
+verilog-alu-qupj-block.bdf
+verilog-alu-qupj.qpf
+verilog-alu-qupj.qsf
