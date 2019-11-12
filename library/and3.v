@@ -1,5 +1,5 @@
 
-module AND3 (
+module KATIO_AND3 (
 	input A,
 	input B,
 	input C,
