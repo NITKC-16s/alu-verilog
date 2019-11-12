@@ -29,6 +29,7 @@ initial begin
    // A and B
    #10 M = 3'b001;
 	a = 0; b = 0;
+	c = 0;
    #10  a = 1;
    #10  a = 0; b = 1;
    #10  a = 1;
