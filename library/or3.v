@@ -1,5 +1,5 @@
 
-module OR3 (
+module KATIO_OR3 (
 	input A,
 	input B,
 	input C,
