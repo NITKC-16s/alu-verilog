@@ -3,7 +3,7 @@ module TEST;
 reg a, b, c;
 
 OR3 new_or (a, b, c, or_out);
-NOR3 new_nor (a, b, c, nor_out);
+KATIO_NOR3 new_nor (a, b, c, nor_out);
 
 initial begin
    $dumpfile("test.vcd");

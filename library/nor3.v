@@ -1,5 +1,5 @@
 
-module NOR3 (
+module KATIO_NOR3 (
 	input A,
 	input B,
 	input C,

@@ -24,7 +24,7 @@ module ALU (
 
 	FA2 new_fa (A, B, C_in4, FA_out_s, FA_out_c);
 
-	NOR3 out_port_check_1 (decoder_x[0], decoder_x[3], decoder_x[4], use_s_as_out);
+	KATIO_NOR3 out_port_check_1 (decoder_x[0], decoder_x[3], decoder_x[4], use_s_as_out);
 	OR2  out_port_check_2 (decoder_x[1], decoder_x[2], use_c_as_out);
 
 	OR2 new_or_for_ds_3 (use_s_as_out, use_c_as_out, Selector);
