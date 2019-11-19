@@ -9,9 +9,9 @@ module DATASELECTOR2 (
 	wire C;
 	wire D;
 
-	NOT1 new_not   (S, SB);
-	KATIO_AND2 new_and_1 (A, SB, C);
-	KATIO_AND2 new_and_2 (B, S,  D);
-	KATIO_OR2  new_or    (C, D, X);
+	KATIO_NAND2 new_nand_1 (B, S, BS);
+	KATIO_NAND2 new_nand_2 (S, S, SS);
+	KATIO_NAND2 new_nand_3 (A, SS, ASS);
+	KATIO_NAND2 new_nand_4 (BS, ASS, X);
 
 endmodule
