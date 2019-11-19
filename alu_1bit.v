@@ -18,9 +18,9 @@ module ALU (
 	// 0x03 : 011 : ExOR
 	// 0x04 : 100 : Not ExOR
 
-	KATIO_AND2 set_1_when_mode000 (C_in, decoder_x[0], C_in2);
-	KATIO_OR2  set_0_when_mode010 (C_in2, decoder_x[2], C_in3);
-	KATIO_OR2  set_0_when_mode100 (C_in3, decoder_x[4], C_in4);
+	KATIO_AND2 set_1_when_mode_plus (C_in, decoder_x[0], C_in2);
+	KATIO_OR2  set_0_when_mode_orexorb (decoder_x[2], decoder_x[4], C_in3);
+	KATIO_OR2  set_0_when_mode_calc (C_in2, C_in3, C_in4);
 
 	FA2 new_fa (A, B, C_in4, FA_out_s, C_out);
 
