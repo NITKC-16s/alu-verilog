@@ -22,15 +22,13 @@ module ALU (
 	KATIO_OR2  set_0_when_mode010 (C_in2, decoder_x[2], C_in3);
 	KATIO_OR2  set_0_when_mode100 (C_in3, decoder_x[4], C_in4);
 
-	FA2 new_fa (A, B, C_in4, FA_out_s, FA_out_c);
+	FA2 new_fa (A, B, C_in4, FA_out_s, C_out);
 
 	KATIO_NOR3 out_port_check_1 (decoder_x[0], decoder_x[3], decoder_x[4], use_s_as_out);
 	KATIO_OR2  out_port_check_2 (decoder_x[1], decoder_x[2], use_c_as_out);
 
 	KATIO_OR2 new_or_for_ds_3 (use_s_as_out, use_c_as_out, Selector);
 
-	DATASELECTOR2 output_ds (Selector, FA_out_s, FA_out_c, X);
-
-	KATIO_AND2 check_c (FA_out_c, decoder_x[0], C_out);
+	DATASELECTOR2 output_ds (Selector, FA_out_s, C_out, X);
 
 endmodule
