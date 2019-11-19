@@ -20,10 +20,10 @@ TEST := test/test.vvp \
 	test/test_ds.vvp \
 	test/test_decoder.vvp \
 	test/test_3in.vvp \
-	test/test_alu.vvp \
-	test/test_alu8.vvp \
-	test/test_alu16.vvp \
-	test/test_alu32.vvp
+	test/test_alu.vvp
+	#test/test_alu8.vvp \
+	#test/test_alu16.vvp \
+	#test/test_alu32.vvp
 
 all: $(TEST)
 

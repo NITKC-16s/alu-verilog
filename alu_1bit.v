@@ -1,15 +1,15 @@
 
 module ALU (
-	input wire [2:0] Mode,
+	input wire [7:0] decoder_x,
 	input A,
 	input B,
 	input C_in,
 	output X,
 	output C_out );
 
-	wire [7:0] decoder_x;
+	//wire [7:0] decoder_x;
 
-	DECODER3 opecode_decoder (Mode[2], Mode[1], Mode[0], decoder_x[7:0]);
+	//DECODER3 opecode_decoder (Mode[2], Mode[1], Mode[0], decoder_x[7:0]);
 
 	// mode
 	// 0x00 : 000 : plus
@@ -24,10 +24,10 @@ module ALU (
 
 	FA2 new_fa (A, B, C_in4, FA_out_s, C_out);
 
-	KATIO_NOR3 out_port_check_1 (decoder_x[0], decoder_x[3], decoder_x[4], use_s_as_out);
-	KATIO_OR2  out_port_check_2 (decoder_x[1], decoder_x[2], use_c_as_out);
+	//KATIO_NOR3 out_port_check_1 (decoder_x[0], decoder_x[3], decoder_x[4], use_s_as_out);
+	KATIO_OR2  out_port_check_2 (decoder_x[1], decoder_x[2], Selector);
 
-	KATIO_OR2 new_or_for_ds_3 (use_s_as_out, use_c_as_out, Selector);
+	//KATIO_OR2 new_or_for_ds_3 (use_s_as_out, use_c_as_out, Selector);
 
 	DATASELECTOR2 output_ds (Selector, FA_out_s, C_out, X);
 
