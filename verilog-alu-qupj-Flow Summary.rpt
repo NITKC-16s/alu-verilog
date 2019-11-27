@@ -1,0 +1,61 @@
+Flow Summary report for verilog-alu-qupj
+Wed Nov 27 22:49:09 2019
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++-----------------------------------+---------------------------------------------+
+; Flow Status                       ; Successful - Wed Nov 27 22:23:52 2019       ;
+; Quartus II 64-Bit Version         ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name                     ; verilog-alu-qupj                            ;
+; Top-level Entity Name             ; verilog-alu-qupj-block                      ;
+; Family                            ; Arria II GZ                                 ;
+; Logic utilization                 ; < 1 %                                       ;
+;     Combinational ALUTs           ; 63 / 179,200 ( < 1 % )                      ;
+;     Memory ALUTs                  ; 0 / 89,600 ( 0 % )                          ;
+;     Dedicated logic registers     ; 0 / 179,200 ( 0 % )                         ;
+; Total registers                   ; 0                                           ;
+; Total pins                        ; 100 / 634 ( 16 % )                          ;
+; Total virtual pins                ; 0                                           ;
+; Total block memory bits           ; 0 / 11,381,760 ( 0 % )                      ;
+; DSP block 18-bit elements         ; 0 / 800 ( 0 % )                             ;
+; Total GXB Receiver Channel PCS    ; 0 / 16 ( 0 % )                              ;
+; Total GXB Receiver Channel PMA    ; 0 / 16 ( 0 % )                              ;
+; Total GXB Transmitter Channel PCS ; 0 / 16 ( 0 % )                              ;
+; Total GXB Transmitter Channel PMA ; 0 / 16 ( 0 % )                              ;
+; Total PLLs                        ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                        ; 0 / 4 ( 0 % )                               ;
+; Device                            ; EP2AGZ225FF35I3                             ;
+; Timing Models                     ; Final                                       ;
++-----------------------------------+---------------------------------------------+
+
+
