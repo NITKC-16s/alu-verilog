@@ -1,6 +1,6 @@
 
 module ALU8 (
-	input wire [2:0] Mode,
+	input wire [7:0] Mode,
 	input [7:0] A,
 	input [7:0] B,
 	input C_in,

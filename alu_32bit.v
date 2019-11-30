@@ -1,6 +1,6 @@
 
 module ALU32 (
-	input wire [2:0] Mode,
+	input wire [7:0] Mode,
 	input [31:0] A,
 	input [31:0] B,
 	input C_in,
