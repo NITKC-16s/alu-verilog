@@ -1,0 +1,47 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	0x7f31847c1fc7: ccl_err + 0x7fc7 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0xb1)
+	0x7f31847c4e4a: ccl_err + 0xae4a (_Z14err_terminatorv + 0x4b)
+	0x7f3180548796: stdc++.so.6 + 0x63796 (_ZN10__cxxabiv111__terminateEPFvvE + 0x6)
+	0x7f31805487c3: stdc++.so.6 + 0x637c3
+	0x7f31805489ee: stdc++.so.6 + 0x639ee
+	0x7f31805995e7: stdc++.so.6 + 0xb45e7 (_ZSt19__throw_logic_errorPKc + 0x67)
+	   0x44d044: quartus_map + 0x4d044 (_ZNSbIcSt11char_traitsIcE17MEM_STL_ALLOCATORIcEEC2EPKcRKS2_ + 0x124)
+	0x7f31c0438cbe: synth_sgn + 0xc7cbe (_ZNK15SGN_PRIM_MAPPER28error_missing_primitive_portEPSt3mapIPKcP19MSG_LOCATION_SCHEMASt4lessIS2_E17MEM_STL_ALLOCATORISt4pairIS2_S4_EEES2_S2_ + 0x16e)
+	0x7f31c04b4b70: synth_sgn + 0x143b70 (_ZNK15SGN_PRIM_MAPPER5startEmN15HDB_DESIGN_UNIT4TYPEE + 0xb40)
+	0x7f31c04b4cd4: synth_sgn + 0x143cd4 (_ZNK21SGN_NETLIST_PROCESSOR18initial_processingEmN15HDB_DESIGN_UNIT4TYPEE + 0x64)
+	0x7f31c04f4c12: synth_sgn + 0x183c12 (_ZNK10SGN_FN_LIB14start_vrf_flowEv + 0x72)
+	0x7f31c04f51e4: synth_sgn + 0x1841e4 (_ZN10SGN_FN_LIB5startEP16SGN_WRAPPER_INFO + 0x554)
+	0x7f31c04f8f0c: synth_sgn + 0x187f0c (_ZNK13SGN_EXTRACTOR24single_module_extractionEP17HDB_INSTANCE_NAMEP10HDB_ENTITYP16SGN_WRAPPER_INFO + 0xec)
+	0x7f31c0500a88: synth_sgn + 0x18fa88 (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0x1f8)
+	0x7f31c0501a36: synth_sgn + 0x190a36 (_ZN13SGN_EXTRACTOR36recurse_into_newly_extracted_netlistEP10HDB_ENTITYP17HDB_INSTANCE_NAMEmP16SGN_WRAPPER_INFO + 0x546)
+	0x7f31c0500b6c: synth_sgn + 0x18fb6c (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0x2dc)
+	0x7f31c0501a36: synth_sgn + 0x190a36 (_ZN13SGN_EXTRACTOR36recurse_into_newly_extracted_netlistEP10HDB_ENTITYP17HDB_INSTANCE_NAMEmP16SGN_WRAPPER_INFO + 0x546)
+	0x7f31c0500b6c: synth_sgn + 0x18fb6c (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0x2dc)
+	0x7f31c0501a36: synth_sgn + 0x190a36 (_ZN13SGN_EXTRACTOR36recurse_into_newly_extracted_netlistEP10HDB_ENTITYP17HDB_INSTANCE_NAMEmP16SGN_WRAPPER_INFO + 0x546)
+	0x7f31c0500b6c: synth_sgn + 0x18fb6c (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0x2dc)
+	0x7f31c0501a36: synth_sgn + 0x190a36 (_ZN13SGN_EXTRACTOR36recurse_into_newly_extracted_netlistEP10HDB_ENTITYP17HDB_INSTANCE_NAMEmP16SGN_WRAPPER_INFO + 0x546)
+	0x7f31c0500b6c: synth_sgn + 0x18fb6c (_ZN13SGN_EXTRACTOR20recursive_extractionEP17HDB_INSTANCE_NAMEP16SGN_WRAPPER_INFOPKc + 0x2dc)
+	0x7f31c0506a67: synth_sgn + 0x195a67 (_ZN13SGN_EXTRACTOR7extractEv + 0x327)
+	0x7f31c05164c7: synth_sgn + 0x1a54c7 (_Z12sgn_qic_fullP10CMP_FACADERSt6vectorISbIcSt11char_traitsIcE17MEM_STL_ALLOCATORIcEES4_IS6_EERS1_IdS4_IdEE + 0x467)
+	   0x4248c8: quartus_map + 0x248c8 (_Z16qsyn_execute_sgnP10CMP_FACADERSt6vectorISbIcSt11char_traitsIcE17MEM_STL_ALLOCATORIcEES4_IS6_EERKS6_P14THR_NAMED_PIPESD_ + 0x158)
+	   0x443cb9: quartus_map + 0x43cb9 (_ZN14QSYN_FRAMEWORK12execute_coreEP14THR_NAMED_PIPES1_ + 0x1e9)
+	   0x4476ba: quartus_map + 0x476ba (_ZN14QSYN_FRAMEWORK7executeEv + 0xbca)
+	0x7f31afec208c: comp_qexe + 0x2008c (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x872)
+	   0x43c458: quartus_map + 0x3c458 (_Z9qsyn_mainiPPKc + 0x1e8)
+	0x7f3187043ef0: ccl_msg + 0x49ef0 (_Z15msg_main_threadPv + 0x10)
+	0x7f3184387d4c: ccl_thr + 0x5d4c (thr_final_wrapper + 0xc)
+	0x7f3187043fa5: ccl_msg + 0x49fa5 (_Z18msg_thread_wrapperPFPvS_ES_ + 0x5b)
+	   0x46ab3b: quartus_map + 0x6ab3b (_Z18mem_thread_wrapperPFPvS_ES_ + 0x9b)
+	0x7f31847c2def: ccl_err + 0x8def (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)
+	0x7f3184388112: ccl_thr + 0x6112 (thr_thread_wrapper + 0x15)
+	0x7f3187045ee2: ccl_msg + 0x4bee2 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xa3)
+	0x7f317fdd9153: c.so.6 + 0x27153 (__libc_start_main + 0xf3)
+	   0x420161: quartus_map + 0x20161
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Tue Nov 12 11:46:17 2019
+</date>
+<version>Version 15.0.0 Build 145 04/22/2015 SJ Full Version</version>
+</internal_error>

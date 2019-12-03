@@ -1,7 +1,2 @@
 *.vcd
 *.vvp
-db
-serv_req_info.txt
-incremental_db
-output_files
-simulation
